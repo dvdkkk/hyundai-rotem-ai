@@ -39,12 +39,9 @@ export const Hero: React.FC = () => {
           <span className="text-xs font-bold tracking-wide">{hero.badge}</span>
         </div>
         
-          <video 
+          <img 
             src="https://mblogvideo-phinf.pstatic.net/MjAyNjA2MTJfMTMx/MDAxNzgxMjUxMzMzNDcz.zs3SAo4V_XW5m-_jT6tKL0AtG16Eb2U-9cUn8zFsk1Yg.lf8LazLrWhT0UJoSm5DXKTMQqpirhXt9xjd7txyS-EEg.GIF/rotem_ai_pc0_gif_(1)_(2)_(1).gif?type=mp4w800" 
-            autoPlay
-            loop
-            muted
-            playsInline
+            alt="현대로템 AI모델 과정 이미지" 
             referrerPolicy="no-referrer"
             className="w-1/2 mx-auto h-auto mb-6 rounded-lg"
           />
