@@ -39,16 +39,12 @@ export const Hero: React.FC = () => {
           <span className="text-xs font-bold tracking-wide">{hero.badge}</span>
         </div>
         
-          <video 
-            className="w-full md:w-2/5 mx-auto h-auto mb-6 rounded-lg" 
-            autoPlay 
-            muted 
-            loop 
-            playsInline
+          <img 
+            src="https://postfiles.pstatic.net/MjAyNjA2MTJfMjUx/MDAxNzgxMjUzNDI3NjM2.qvZcyhGBXQmhSVqvz6ng6ggajsjqlZcS1wvGodal8RIg.eomvGr0K3M2SuSNiQYFG2ZMBoaohkg-1pPs8hNrcpIUg.JPEG/20260612_173456.jpg?type=w966"
+            alt="현대로템 AI모델 과정 이미지"
             referrerPolicy="no-referrer"
-          >
-            <source src="https://mblogvideo-phinf.pstatic.net/MjAyNjA2MTJfMTMx/MDAxNzgxMjUxMzMzNDcz.zs3SAo4V_XW5m-_jT6tKL0AtG16Eb2U-9cUn8zFsk1Yg.lf8LazLrWhT0UJoSm5DXKTMQqpirhXt9xjd7txyS-EEg.GIF/rotem_ai_pc0_gif_(1)_(2)_(1).gif?type=mp4w800" type="video/mp4" />
-          </video>
+            className="w-full md:w-2/5 mx-auto h-auto mb-6 rounded-lg"
+          />
         
         {/* Course Title Plate */}
         <div className="max-w-4xl mx-auto mb-12 animate-fade-in-up delay-300">
