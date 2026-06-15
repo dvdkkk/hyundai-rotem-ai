@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef, useState } from 'react';
-import { Users, Zap, Target } from 'lucide-react';
+import { Users, Zap, Target, BrainCircuit } from 'lucide-react';
 import { useContent } from '../contexts/ContentContext';
 import { ImageCarousel } from './ImageCarousel';
 
@@ -48,7 +48,7 @@ export const IntroSection: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center">
           
           {/* Main Headline */}
-          <h2 className={`text-2xl md:text-4xl lg:text-6xl font-black text-white leading-[1.3] md:leading-[1.1] mb-10 tracking-tight break-keep ${getStyle("delay-100").className}`}>
+          <h2 className={`text-xl md:text-3xl lg:text-5xl font-black text-white leading-[1.3] md:leading-[1.1] mb-10 tracking-tight break-keep ${getStyle("delay-100").className}`}>
             {intro.title1}<br />
             <span className="relative inline-block px-2">
                 <span className="absolute inset-0 bg-red-700 rounded-lg transform translate-y-1"></span>
@@ -57,16 +57,26 @@ export const IntroSection: React.FC = () => {
           </h2>
 
           {/* Description */}
-          <div className={`inline-block animate-pulse mb-16 ${getStyle("delay-200").className}`}>
-            <p className="text-base md:text-xl text-white font-bold leading-relaxed bg-red-700/80 px-6 py-3 rounded-full break-keep">
-              {intro.description}
-            </p>
+          <img
+            src="https://postfiles.pstatic.net/MjAyNjA2MTJfMjUx/MDAxNzgxMjUzNDI3NjM2.qvZcyhGBXQmhSVqvz6ng6ggajsjqlZcS1wvGodal8RIg.eomvGr0K3M2SuSNiQYFG2ZMBoaohkg-1pPs8hNrcpIUg.JPEG/20260612_173456.jpg?type=w966"
+            alt="알림 이미지"
+            referrerPolicy="no-referrer"
+            className="w-full max-w-2xl mx-auto mb-6 rounded-lg"
+          />
+
+          <div className={`mb-16 ${getStyle("delay-200").className}`}>
+            <div className="flex items-center gap-4 bg-gradient-to-r from-zinc-800 to-zinc-900 border border-zinc-700/50 text-white font-medium text-base md:text-lg py-4 px-6 rounded-xl shadow-lg max-w-2xl mx-auto break-keep">
+              <BrainCircuit className="w-8 h-8 text-red-500 shrink-0" />
+              <span>첨단 기술의 발전으로 인한 AI 중요도가 높아짐</span>
+            </div>
           </div>
 
           {/* Image Carousel */}
-          <div className={`mb-16 ${getStyle("delay-300").className}`}>
-            <ImageCarousel images={intro.images} />
-          </div>
+          {intro.images && intro.images.length > 0 && (
+            <div className={`mb-16 ${getStyle("delay-300").className}`}>
+              <ImageCarousel images={intro.images} />
+            </div>
+          )}
 
         </div>
       </div>

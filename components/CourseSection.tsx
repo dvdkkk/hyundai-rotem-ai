@@ -45,24 +45,15 @@ const Reveal: React.FC<RevealProps> = ({ children, className = "", delay = 0 }) 
 
 // Curriculum Data Structure
 const CURRICULUM_DATA = [
-  { id: "01", title: "리눅스 서버 운영 시스템", desc: "클라우드 플랫폼을 이루는 운영 관리 시스템의 시작", subjects: ["사용자 관리", "서버 관리와 원격접속", "네트워크 서비스 구축", "가상화 시스템 구축"] },
-  { id: "02", title: "클라우드 서비스위한 네트워크 기본", desc: "클라우드 서비스 이용과 리소스간 통신을 위한 시작과 끝", subjects: ["데이터 센터 네트워크 기술", "접근 제어와 트래픽 관리", "라우팅과 스위칭", "클라우드 데이터 센터 운영을 위한 BGP, MPLS"] },
-  { id: "03", title: "데이터 베이스", desc: "클라우드 리소스를 보관, 관리하기위한 데이터 관리의 시작", subjects: ["관리형 데이터베이스의 이해", "쿼리 작성과 최적화", "elasticsearch(opensearch) 기반의 데이터 관리", "elasticsearch 로 시작하는 머신러닝"] },
-  { id: "04", title: "클라우드 자동화를 위한 파이썬 프로그래밍", desc: "인프라 관리를 위한 스크립트 언어의 시작", subjects: ["변수와 자료형", "기본 문법(if, for, while)", "함수의 개념과 작성", "객체지향 프로그래밍"] },
-  { id: "05", title: "스트리밍 데이터 처리를 위한 분산 플랫폼", desc: "효과적인 대용량 데이터 처리의 첫걸음", subjects: ["컨테이너 기반의 카프카 설치", "메시지 작성과 데이터 읽기", "데이터 파이프라인", "(토이프로젝트) 카프카, ES, Kibana 기반 대용량 데이터 분석 및 시각화"] },
-  { id: "06", title: "오픈소스 쿠버네티스 아키텍처 설계 및 구현", desc: "클라우드네이티브기반 개발과 운영을 위한 모든 것", subjects: ["Pod 기반의 애플리케이션 배포", "서비스, 인그레스를 이용한 애플리케이션 접속", "Pod 자원관리 및 모니터링", "k8s 기반의 CI.CD", "고가용성 기반의 k8s 클러스터(멀티 master, etcd 백업/복구)"] },
-  { id: "07", title: "MLOps 인프라", desc: "kubernetes 환경에서 kubeflow 기반의 MLOps 환경 구성", subjects: ["notebook server", "katib", "pipeline", "KFServe"] },
-  { id: "08", title: "IaC 기반의 인프라 설계", desc: "테라폼 코드로 작성하는 인프라 설계의 첫걸음", subjects: ["테라폼을 사용한 코드형 인프라", "테라폼을 사용한 인프라 배포 자동화", "(토이프로젝트) Terraform 기반 클라우드 인프라 환경 구현(AWS, OpenStack)"] },
-  { id: "09", title: "컨테이너 서비스 개발을 위한 Docker platform 활용", desc: "컨테이너 기반의 개발과 인프라 운영의 시작", subjects: ["Dockerfile 이용한 이미지 작성", "도커 컨테이너와 이미지 구조 이해", "도커 컴포즈를 이용한 컨테이너 환경 설계"] },
-  { id: "10", title: "AWS 클라우드 기술", desc: "세계최고의 퍼블릭 클라우드 서비스를 위한 시작", subjects: ["EC2 인스턴스", "VPC, Subnet 기반의 네트워크 환경 설계", "데이터베이스와 스토리지"] },
-  { id: "11", title: "고가용성 중심 AWS 아키텍처설계", desc: "심층적인 AWS 서비스를 이용하기 위한 방법", subjects: ["AWS 기반의 IaC", "서버리스 아키텍처", "멀티 티어 아키텍처 설계", "멀티 리전, 멀티 존 구성", "ASG/keda + karpenter 기반의 오토 스케일링"] },
-  { id: "12", title: "생성형 AI 서비스 개발을 위한 Amazon Bedrock", desc: "AWS에서 시작하는 생성형 AI 서비스", subjects: ["프롬프트 엔지니어링", "RAG 구현하기", "Bedrock 으로 Agent 구현하기"] },
-  { id: "13", title: "DevOps 환경에서의 CI/CD", desc: "운영환경과 개발환경을 통합·자동화 하기 위한 다양한 기술", subjects: ["젠킨스 동작원리 및 파이프라인", "github 와의 연동(gitOps, webhook)", "argoCD 활용"] },
-  { id: "14", title: "서비스메시 기반 MSA설계 및 관리", desc: "통신을 제어하고 모니터링하는 서비스 메시 솔루션", subjects: ["서비스 메시의 이해", "이스티오 게이트웨이와 프락시", "네트워크 제어하기"] },
-  { id: "15", title: "오픈스택 기반 프라이빗 클라우드 구현", desc: "클라우드 환경을 직접 구축하는 오픈소스 컨테이너 플랫폼", subjects: ["컨테이너 기반의 오픈스택 배포(kolla-ansible)", "네트워크/컨트롤/스토리지/컴퓨트 서비스", "오픈스택환경에서의 쿠버네티스", "로드밸런서(octavia), kubernetes 서비스환경구성", "(토이프로젝트) 오픈스택 환경에서의 웹서비스 환경 구현 (octavia, nova, trove, cinder)"] },
-  { id: "16", title: "오픈시프트(OpenShift) 구축", desc: "엔터프라이즈 규모의 쿠버네티스 클라우드 플랫폼", subjects: ["컨테이너 기술과 서비스 생성", "애플리케이션 배포 및 트러블 슈팅"] },
-  { id: "17", title: "KT클라우드 플랫폼", desc: "국내 최고의 퍼블릭 클라우드를 만나다!", subjects: ["KT클라우드 공인교육"] },
-  { id: "18", title: "Azure 클라우드", desc: "Azure 로 시작하는 퍼블릭 클라우드 서비스", subjects: ["사용자와 그룹, 액세스 관리", "가상네트워크, 가상머신, 스토리지", "고가용성과 부하분산"] },
+  { id: "01", title: "국방산업의 이해", desc: "글로벌방산 및 한국의 국방산업의 이해", subjects: ["글로벌 방신시장의 이해", "한국 국방산업의 이해", "국방 연구개발 프로세스 이해", "항공우주 기반 국방산업의 이해"] },
+  { id: "02", title: "인공지능 수학", desc: "인공지능 이해", subjects: ["선형대수 학습", "경우의수 학습", "확률과 통계학습", "미적분학 기초 학습", "선형대수와 확률과 통계", "자료구조의 이해"] },
+  { id: "03", title: "파이썬프로그래밍", desc: "파이썬 문법 이해하기", subjects: ["파이썬 문법 이해하기", "파이썬으로 파이 게임 만들기", "크롤링 학습", "GitHub과 오픈소스 프로그래밍 활용"] },
+  { id: "04", title: "웹프로그래밍", desc: "HTML&CSS", subjects: ["HTML&CSS", "JavaScript 활용 및 심화", "Flask/pytonanywhere", "Django framework"] },
+  { id: "05", title: "데이터베이스", desc: "RDBMS와 SQL", subjects: ["RDBMS와 SQL", "SQL와 기본쿼리", "데이터 생성, 조작, 변환, 집계", "NoSQL : MongoDB"] },
+  { id: "06", title: "데이터분석", desc: "Numpy 배열과 백터", subjects: ["Numpy 배열과 백터", "Pandas 시리즈와 데이터프레임", "데이터 입출력: CSV", "데이터 처리 : 결측치, 정렬, 병합, 집계", "데이터 시각화: Matplotlib, Seaborm", "데이터 분석: IRIS, BostonHousing"] },
+  { id: "07", title: "Machine Learning", desc: "머신러닝 알고리즘 및 활용", subjects: ["회귀분석, 다중회귀 모델, 정규화 모델", "로지스틱 회귀", "AI 분류 개념", "KNN원리 이해(Unsupervised Learning)", "KNN algorithm과 Clustering 차이점", "bayes,s theorem, likelihood, MLE/MAP 원리 이해", "지도학습, 비지도학습 방법론 및 활용", "Clustering/K-means, GMM/PCA- 공분산 행렬", "랜덤 포레스트/부스팅/앙상블 및 배깅"] },
+  { id: "08", title: "Deep Learning", desc: "인공신경망 및 딥러닝 모델", subjects: ["인공신경망", "CNN, RNN, CRNN, NNF", "텐서플로우 및 keras 활용", "텍스트를 위한 딥러닝(토큰화, TextVectorization, 단어 시퀀스 모델, 트랜스포머 아키텍처, 시퀀스 투 시퀀스 학습, 텍스트 생성모델)", "이미지 딥러닝(컴퓨터 비전을 위한 딥러닝, Fine-tunning)", "생성모델(딥드림, 뉴럴 스타일 트랜스터, 변이형 오토인코더를 사용한 이미지 생성, 생성적 적대 신경망(GAN))"] },
+  { id: "09", title: "AI를 위한 알고리즘", desc: "자료구조 및 알고리즘", subjects: ["O자료구조 : 배열, 튜플, 연결리스트, 해시테이블, 스텍, 큐, 덱, 그래프, 트리, 힙", "알고리즘 : 재귀, 정렬, 다이나믹프로그래밍, 그래프, DFS, BFS, 그리디알고리즘"] },
 ];
 
 const PROJECTS_DATA = [

@@ -20,18 +20,11 @@ const defaultContent: SiteContent = {
   },
   intro: {
     badge: "VISSON",
-    title1: "왜? KT클라우드 인프라 기술을",
+    title1: "왜? 현대로템 SMART AI모델 개발 기술을",
     highlight: "배워야 할까?",
     title2: "",
     description: "100% 오프라인 수업!",
-    images: [
-      "https://postfiles.pstatic.net/MjAyNjAzMjNfMTUg/MDAxNzc0MjQ3ODgxNzA0.9nl7OFQdRRxgs1OFBkfZmK3Te8TBQvi6WULjx2MiDlsg.T-Cg2WURkmLN-psRRwx_JtJew78PuN8yS1wz2Wf8Ts0g.JPEG/news_img01.jpg?type=w966",
-      "https://postfiles.pstatic.net/MjAyNjAzMjNfNzgg/MDAxNzc0MjQ3ODgxNzA1.JiEDLMXLDuia3fcKubvQX1OotJWNdm-iBc5PME1Ano4g.xAQ_xonDKqlqUNQUP_oSesvT4hqKLuEYaQfbH6e-NgIg.JPEG/news_img06.jpg?type=w966",
-      "https://postfiles.pstatic.net/MjAyNjAzMjNfMTE5/MDAxNzc0MjQ3ODgxNzAy.ZYo4qPxkwDOLd9KcgfXRKJvUJ5imOLXkhgn7JjsB86kg.lxnLZTyeMI4NzVg38yPAzuNr0IvGO9-UovWefZgeXM4g.JPEG/news_img05.jpg?type=w966",
-      "https://postfiles.pstatic.net/MjAyNjAzMjNfNzAg/MDAxNzc0MjQ3ODgxNzA3.ed_OOPYSoEj57TaKeJpbMW671WRog2Cz8KNHdMpDMikg.M8dG1W-w_mFGuMWBbyFs9tKM54G2OWvYwgzhG0a7H_Yg.JPEG/news_img04.jpg?type=w966",
-      "https://postfiles.pstatic.net/MjAyNjAzMjNfMjcw/MDAxNzc0MjQ3ODgxNjY1.vGk5R1fZLsrt5MSuP5FpiM7LFZp-mYMrq_Q9QNB6EkYg.2_Lj_XahAOAcRTgoy6KifjgRHfoAMx1MU4sCxQbHadcg.JPEG/news_img03.jpg?type=w966",
-      "https://postfiles.pstatic.net/MjAyNjAzMjNfMjg1/MDAxNzc0MjQ3ODgxNzA2.WinKM72O8F4mhp2CrbuzNsgnZ-NPIMhvyLfcpSsim1wg.WbEv8sVIpaSEfYXFtAfakGHY945nDhHVGMWOqv1Wxosg.JPEG/news_img02.jpg?type=w966"
-    ]
+
   },
   vision: {
     items: [

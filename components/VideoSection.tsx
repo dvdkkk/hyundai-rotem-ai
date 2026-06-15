@@ -49,7 +49,7 @@ export const VideoSection: React.FC = () => {
     <section className="py-24 bg-zinc-950 relative border-b border-zinc-900">
       <div className="container mx-auto px-4">
         <Reveal delay={200}>
-          <div className="max-w-4xl mx-auto">
+          <div className="w-full">
             <div className="relative aspect-video rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl bg-black group">
               {!isPlaying ? (
                 <button 

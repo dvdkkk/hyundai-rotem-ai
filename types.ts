@@ -58,7 +58,7 @@ export interface IntroContent {
   highlight: string;
   title2: string;
   description: string;
-  images: string[];
+  images?: string[];
 }
 
 export interface VisionItem {

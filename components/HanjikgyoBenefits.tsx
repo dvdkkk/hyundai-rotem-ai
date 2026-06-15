@@ -1,7 +1,8 @@
 
 import React, { useRef, useState, useEffect, ReactNode } from 'react';
+import { motion } from "motion/react";
 import { 
-  Gift, Monitor, Cloud, Cpu, BookOpen, Book, Code2, Trophy, Wallet
+  Gift, Monitor, Book, Trophy, Wallet, Users, Zap, Target
 } from 'lucide-react';
 import { ApplyButton } from './ApplyButton';
 
@@ -47,59 +48,59 @@ export const HanjikgyoBenefits: React.FC = () => {
   const benefits = [
     {
       id: 1,
-      title: "실시간 온라인 교육",
-      desc: "다양한 온라인 협업 툴을 통한 최적의 교육환경 제공",
-      icon: Monitor,
-      highlight: "text-blue-500"
+      title: "훈련장려금 지급",
+      desc: "지속적인 학습을 위한 훈련장려금 제공",
+      icon: Wallet,
+      highlight: "text-emerald-500"
     },
     {
       id: 2,
-      title: "프로젝트 클라우드 지원",
-      desc: "팀 프로젝트의 성장을 위해 클라우드 비용을 지원합니다.",
-      icon: Cloud,
-      highlight: "text-cyan-500"
-    },
-    {
-      id: 3,
-      title: "생성형 AI 도구 지원",
-      desc: "AI와 함께라면 학습이 더 빠르고 똑똑해집니다.",
-      icon: Cpu,
-      highlight: "text-indigo-500"
-    },
-    {
-      id: 4,
-      title: "인프런 콘텐츠 제공",
-      desc: "합격 시점부터 한 달 간 인프런 강의를 무제한으로 수강하실 수 있습니다.",
-      icon: BookOpen,
-      highlight: "text-orange-500"
-    },
-    {
-      id: 5,
-      title: "훈련 교재 제공",
+      title: "교재제공",
       desc: "학습 및 지식 성장을 위해 선정된 전문 서적을 제공합니다.",
       icon: Book,
       highlight: "text-green-500"
     },
     {
-      id: 6,
-      title: "모의 코딩 테스트 지원",
-      desc: "실전 같은 모의 테스트로 실력을 검증하고 한 단계 도약하세요.",
-      icon: Code2,
-      highlight: "text-red-500"
+      id: 3,
+      title: "현업 취업 특강",
+      desc: "현업 실무자의 경험을 공유하는 취업 특강 제공",
+      icon: Users,
+      highlight: "text-blue-500"
     },
     {
-      id: 7,
-      title: "성장 격려금 제공",
-      desc: "대회 수상 시 성장 격려금으로 최대 50만원 제공됩니다.",
+      id: 4,
+      title: "프로젝트 멘토링",
+      desc: "주 1회 8시간, 총 5회 40시간의 밀착 프로젝트 멘토링",
+      icon: Target,
+      highlight: "text-indigo-500"
+    },
+    {
+      id: 5,
+      title: "프로젝트 상품 수여",
+      desc: "최우수팀 및 우수팀 대상 상품 수여",
       icon: Trophy,
       highlight: "text-yellow-500"
     },
     {
+      id: 6,
+      title: "수료증 발급",
+      desc: "과정 수료 시 공식 수료증 발급",
+      icon: Gift,
+      highlight: "text-orange-500"
+    },
+    {
+      id: 7,
+      title: "참여기업 취업연계",
+      desc: "우수 참여기업과의 취업 연계 프로그램 제공",
+      icon: Zap,
+      highlight: "text-red-500"
+    },
+    {
       id: 8,
-      title: "훈련 장려금 제공",
-      desc: "성장과 연계된 장려금으로 월 최대 300,000원의 훈련장려금이 지급됩니다.",
-      icon: Wallet,
-      highlight: "text-emerald-500"
+      title: "온라인 콘텐츠 제공",
+      desc: "심화 학습을 위한 풍부한 온라인 학습 콘텐츠",
+      icon: Monitor,
+      highlight: "text-cyan-500"
     },
   ];
 
@@ -121,9 +122,14 @@ export const HanjikgyoBenefits: React.FC = () => {
               학습을 돕는 지원부터<br />
               <span className="text-red-600">성장을 이끄는 혜택</span>까지
             </h2>
-            <p className="text-zinc-500 mt-4 text-sm">
-                수강생 여러분이 오직 학습에만 집중할 수 있도록 아낌없이 지원합니다.
-            </p>
+            <motion.p 
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.5, duration: 0.5 }}
+                className="text-white mt-6 text-sm md:text-base bg-gradient-to-r from-red-900/40 to-zinc-900 border border-red-500/50 py-3 px-6 rounded-xl font-medium inline-block shadow-lg"
+            >
+                모든 수료생 한국국방기술학회 이사장 명의 채용 추천서 제공
+            </motion.p>
           </Reveal>
         </div>
 
