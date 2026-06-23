@@ -94,12 +94,17 @@ export const ContentProvider: React.FC<{ children: ReactNode }> = ({ children })
     try {
       const savedContent = localStorage.getItem(STORAGE_KEY);
       if (savedContent) {
-        try {
-          const parsed = JSON.parse(savedContent);
-          setContent({ ...defaultContent, ...parsed });
-        } catch (e) {
-          console.error("Failed to load content", e);
-        }
+       try {
+        const parsed = JSON.parse(savedContent);
+        setContent({ 
+          ...defaultContent, 
+          ...parsed,
+          // 이 아래 한 줄을 똑같이 추가해 주세요!
+          hero: defaultContent.hero 
+        });
+       } catch (e) {
+         console.error("Failed to load content", e);
+       }
       }
 
       const savedLogs = localStorage.getItem(LOG_KEY);
