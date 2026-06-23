@@ -85,6 +85,7 @@ const LOG_KEY = 'visitor_logs_v10';
 
 
 
+
 export const ContentProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [content, setContent] = useState<SiteContent>(defaultContent);
   const [visitorLogs, setVisitorLogs] = useState<VisitorLog[]>([]);
